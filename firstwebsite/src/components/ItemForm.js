@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './ItemForm.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 
 
 const initialValues = {
@@ -36,30 +39,53 @@ function ItemForm() {
 
 
     return (
-        <form className='item-form'>
-            <div className='form-group'>
-                <label>Name</label>
-                <input name='name' placeholder='Name' type='text' value={values.name} onChange={handleChange}></input>
-            </div>
+        // <form className='item-form'>
+        //     <div className='form-group'>
+        //         <label>Name</label>
+        //         <input name='name' placeholder='Name' type='text' value={values.name} onChange={handleChange}></input>
+        //     </div>
 
-            <div className='form-group'>
-                <label>Price</label>
-                <input name='price' type='text' value={values.price} onChange={handleChange}></input>   
-            </div>
+        //     <div className='form-group'>
+        //         <label>Price</label>
+        //         <input name='price' type='text' value={values.price} onChange={handleChange}></input>   
+        //     </div>
 
-            <div className='form-group'>
-                <select name='icon' onChange={handleChange} style={{ padding: '10px', fontSize: '16px' }}>
-                    <option value="">Select an icon</option>
-                    {icons.map(icon => (
-                        <option name="icon" key={icon.name} value={icon.icon}>
-                            <i className="fa-solid fa-mug-saucer">&#xf0f4;s</i>
-                        </option>
-                    ))}
-                </select>
-            </div>
+        //     <div className='form-group'>
+        //         <select name='icon' onChange={handleChange} style={{ padding: '10px', fontSize: '16px' }}>
+        //             <option value="">Select an icon</option>
+        //             {icons.map(icon => (
+        //                 <option name="icon" key={icon.name} value={icon.icon}>
+        //                     <i className="fa-solid fa-mug-saucer">&#xf0f4;s</i>
+        //                 </option>
+        //             ))}
+        //         </select>
+        //     </div>
                       
-        </form>
+        // </form>
+        
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+        
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Check me out" />
+              </Form.Group>
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </Form>
     );
+        
+    
 }
 
 export default ItemForm
