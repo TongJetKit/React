@@ -1,0 +1,65 @@
+.card{
+    border-radius: 1rem;
+    background-color: #644949;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay{
+   position: absolute;
+   height: 70px;
+   left:0;
+   bottom: 0;
+   z-index: 1;
+   width: 100%;
+}
+
+._6{
+    background: linear-gradient(0deg, rgba(231,164,39,1) 0%, rgba(255,255,255,0) 80%);
+}
+
+._5{
+    background: linear-gradient(0deg, rgba(216,189,116,1) 0%, rgba(255,255,255,0) 80%);
+}
+
+._4{
+    background: linear-gradient(0deg, rgba(82,62,88,1) 0%, rgba(255,255,255,0) 80%);
+}
+
+._3{
+    background: linear-gradient(0deg, rgba(89,98,134,1) 0%, rgba(255,255,255,0) 80%);
+}
+
+._2{
+    background: linear-gradient(0deg, rgba(73,100,77,1) 0%, rgba(255,255,255,0) 80%);
+}
+
+.card-content{
+    text-align: center;
+    border-radius: inherit;
+    position:relative;
+}
+
+.name{
+    padding-bottom: 0.6rem;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    font-family: "Jua", sans-serif;
+    font-weight: 500;
+    color: white
+}
+
+.card-content img{
+    width: 7rem;
+    padding-top: .5rem;
+    transition: transform .3s;
+}
+
+.card-content:hover img{
+    transform: scale(1.15);
+
+}
+

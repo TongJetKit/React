@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.nav-container{
+    display:flex;
+    align-items: stretch;
+    text-align: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    background-color: #3B3030;
+    color: white;
+    padding: 0 1rem;
+}
+
+.nav-title{
+    font-size: 2.5rem;
+    font-family: "Jua", sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.nav-menu ul{
+    height:70%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.nav-menu li{
+    align-items: center;
+    padding: 20px 5px;
+    display: flex;
+    font-size: 1.1rem;
+    font-family: "Jua", sans-serif;
+}
+
+
+.nav-menu-active{
+    color: #8fbd9c;
+    border-bottom: 2px solid #ffff
+}
+
+.nav-menu li:hover{
+    color:#667d84 ;
+}
