@@ -1,0 +1,75 @@
+.arcanist-info{
+    padding: 60px;
+}
+
+.profile-container{
+    background-color:  #2d2424;
+    padding: 50px;
+}
+
+.profile-header{
+    font-size: 30px;
+    font-family: "Jua", "San serif";    
+    padding-bottom: 4rem;
+    color: white;
+}   
+
+.profile-introduction{
+    font-family: "Jua", "San serif";
+    width: 95%;
+    max-width: 500px;
+}
+
+.tabs{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    color: white;
+    /* border-bottom: 2px solid #bbb; */
+}
+
+.tab-block{
+    position: relative;
+    padding: 0.5rem 2rem;
+    height: 60px;
+    z-index: 2;
+    font-weight: 500;
+}
+
+.tab-block:before{
+    content:"";
+    position: absolute;
+    bottom: 10px;
+    left:  30px ;
+    width: 60px;
+    height: 5px;
+    background: #888;
+    border-radius: 10px;
+}
+
+.active-tab{
+    border: 2px solid #bbb;
+    border-bottom: none;
+    box-shadow: 0.8px 2px 0px 0px #513636;
+    border-radius: 12px 12px 0 0;
+    color: #a7dce1;
+}
+
+.active-tab:before{
+    background: #a7dce1;
+}
+
+.content{
+    display: none;
+}
+
+
+.active-content{
+    display: block;
+    border: 2px solid #bbb;
+    border-radius: 0px 12px 12px 12px;
+}
+
+
+
+

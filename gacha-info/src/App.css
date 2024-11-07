@@ -1,0 +1,7 @@
+.App{
+    background-image: url('./assets/suitcase_background.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}

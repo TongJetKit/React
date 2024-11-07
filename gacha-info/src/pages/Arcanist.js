@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./Arcanist.css";
-import ArcanistCard from '../components/ArcanistCard';
+import ArcanistCard from "../components/ArcanistCard";
+import { db } from "../database/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 const afflatus = ["Beast", "Intellect", "Mineral", "Plant", "Spirit", "Star"];
-const tier = [2,3,4,5,6]
+const tier = [2, 3, 4, 5, 6];
 
 function Arcanist() {
+  const arcanistCollectionRef = collection(db, "arcanist");
+
   const [selectedAfflatus, setSelectedAfflatus] = useState([]);
   const [selectedTier, setSelectedTier] = useState([]);
+  const [arcanistList, setArcanistList] = useState([]);
 
   const handleFilterAffaltusClick = (filterItem) => {
     if (selectedAfflatus.includes(filterItem)) {
-      let filters = selectedAfflatus.filter((element) => element !== filterItem);
+      let filters = selectedAfflatus.filter(
+        (element) => element !== filterItem
+      );
       setSelectedAfflatus(filters);
     } else {
       setSelectedAfflatus([...selectedAfflatus, filterItem]);
@@ -27,18 +34,33 @@ function Arcanist() {
     }
   };
 
-  const handleClearAfflatus = () =>{
+  const handleClearAfflatus = () => {
     setSelectedAfflatus([]);
-  }
+  };
 
-  const handleClearTier = () =>{
+  const handleClearTier = () => {
     setSelectedTier([]);
-  }
+  };
+
+  const getCharacterList = async () => {
+    try {
+      const querySnapshot = await getDocs(arcanistCollectionRef);
+      const filtered_data = querySnapshot.docs.map((doc) => ({...doc.data(), id: doc.id}));
+      setArcanistList(filtered_data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
-    console.log(selectedAfflatus);
-    console.log(selectedTier);
-  }, [selectedAfflatus, selectedTier]);
+    getCharacterList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // useEffect(() => {
+  //   console.log(selectedAfflatus);
+  //   console.log(selectedTier);
+  // }, [selectedAfflatus, selectedTier]);
 
   return (
     <div className="arcanist-container">
@@ -53,7 +75,6 @@ function Arcanist() {
                     ? "afflatus icon active"
                     : "afflatus icon"
                 }
-                
                 onClick={() => handleFilterAffaltusClick(element)}
               >
                 <img
@@ -64,10 +85,12 @@ function Arcanist() {
               </button>
             );
           })}
-          <button className="clear-button icon"  onClick={handleClearAfflatus}><i className="fa-solid fa-trash"></i></button>
+          <button className="clear-button icon" onClick={handleClearAfflatus}>
+            <i className="fa-solid fa-trash"></i>
+          </button>
         </div>
         <div className="button-group">
-        {tier.map((element, idx) => {
+          {tier.map((element, idx) => {
             return (
               <button
                 className={
@@ -75,24 +98,28 @@ function Arcanist() {
                     ? "tier icon active"
                     : "tier icon"
                 }
-                 
                 onClick={() => handleFilterTierClick(element)}
               >
-                {element}<i class="fa-solid fa-star"></i>
+                {element}
+                <i class="fa-solid fa-star"></i>
               </button>
             );
           })}
-           <button className="clear-button icon"  onClick={handleClearTier}><i className="fa-solid fa-trash"></i></button>
+          <button className="clear-button icon" onClick={handleClearTier}>
+            <i className="fa-solid fa-trash"></i>
+          </button>
         </div>
       </div>
-          
 
       <div className="arcanist-info-container">
-        <ArcanistCard tier="_6"></ArcanistCard>
-        <ArcanistCard tier="_5"></ArcanistCard>
-        <ArcanistCard tier="_4"></ArcanistCard>
-        <ArcanistCard tier="_3"></ArcanistCard>
-        <ArcanistCard tier="_2"></ArcanistCard>
+        {arcanistList.map((arcanist)=>{
+          return <ArcanistCard arcanist={arcanist}></ArcanistCard>
+        })}
+        {/* <ArcanistCard tier="6"></ArcanistCard>
+        <ArcanistCard tier="5"></ArcanistCard>
+        <ArcanistCard tier="4"></ArcanistCard>
+        <ArcanistCard tier="3"></ArcanistCard>
+        <ArcanistCard tier="2"></ArcanistCard> */}
       </div>
     </div>
   );
