@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 .nav-container{
+    width: 100%;
     display:flex;
     align-items: stretch;
     text-align: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 2rem;
-    background-color: #3B3030;
+    transition:all 0.5s;
+    position: fixed;
+    z-index: 20;
     color: white;
     padding: 0 1rem;
+}
+
+.nav-scrolled{
+    background-color: #3B3030;
 }
 
 .nav-title{

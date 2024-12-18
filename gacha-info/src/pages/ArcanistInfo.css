@@ -1,74 +1,110 @@
-.arcanist-info{
-    padding: 60px;
+.hero-banner-container{
+    height: 430px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.hero-banner-container img{
+    object-fit: cover;
+    position: relative;
+    height: 100%;
+    z-index: -1;
+    width: 100%;
 }
 
 .profile-container{
     background-color:  #2d2424;
-    padding: 50px;
+    padding: 60px;
+
 }
 
-.profile-header{
-    font-size: 30px;
-    font-family: "Jua", "San serif";    
-    padding-bottom: 4rem;
-    color: white;
-}   
-
-.profile-introduction{
-    font-family: "Jua", "San serif";
-    width: 95%;
-    max-width: 500px;
+.profile-info{
+    display:flex;
+    justify-content: space-between;
+    padding: 2em 0 2em 0;
+    border-bottom: 2px solid #e5e5e5;
 }
 
-.tabs{
+.avatar{
+    height: 18rem;
+    position: relative;
+    border: 3px solid #608BC1;
+    border-radius: 12px;
+}
+
+.information-column{
+    font-family: "Jua", sans-serif;
     display: flex;
-    position: relative;
     flex-wrap: wrap;
+    gap: 20px;
     color: white;
-    /* border-bottom: 2px solid #bbb; */
 }
 
-.tab-block{
-    position: relative;
-    padding: 0.5rem 2rem;
-    height: 60px;
-    z-index: 2;
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.profile-name{
+    font-size: 40px;
     font-weight: 500;
+    font-style: normal;
 }
 
-.tab-block:before{
-    content:"";
-    position: absolute;
-    bottom: 10px;
-    left:  30px ;
-    width: 60px;
-    height: 5px;
-    background: #888;
-    border-radius: 10px;
+.profile-tier{
+    color: rgba(231,164,39,1);
+    font-size: 25px;
 }
 
-.active-tab{
-    border: 2px solid #bbb;
-    border-bottom: none;
-    box-shadow: 0.8px 2px 0px 0px #513636;
-    border-radius: 12px 12px 0 0;
-    color: #a7dce1;
+.profile-type{
+   font-size: 30px;
 }
 
-.active-tab:before{
-    background: #a7dce1;
+.profile-afflatus{
+    font-size: 30px;
 }
 
-.content{
-    display: none;
+.Star{
+    color:#608BC1;
 }
 
 
-.active-content{
-    display: block;
-    border: 2px solid #bbb;
-    border-radius: 0px 12px 12px 12px;
+.profile-inheritance{
+    flex-basis: 100%;
 }
+
+.content-header{
+    border-bottom: 3px solid white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 25px 0 15px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.insight-column{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+}
+
+.insight-column img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.combat-info-tabs{
+    padding-top: 60px;
+}
+
+
+
+
+
 
 
 

@@ -24,7 +24,6 @@ function ArcanistCard(props) {
       tier = "_6";
   }
 
-  console.log(props)
 
   return (
     <Link to={`./${props.arcanist.name}`}state={{arcanist:props.arcanist} }>

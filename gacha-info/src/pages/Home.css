@@ -1,0 +1,12 @@
+.hero-banner-container{
+    height: 430px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.hero-banner-container img{
+    object-fit: cover;
+    position: relative;
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+}

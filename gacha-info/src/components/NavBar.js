@@ -1,13 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './NavBar.css';
 import { Link,useMatch, useResolvedPath } from 'react-router-dom';
 
 function NavBar() {
+    const [scrollState, setScrollState] = useState("");
+    const handleScroll = () =>{
+        if(window.scrollY > 50){
+            setScrollState("nav-scrolled");
+        }else{
+            setScrollState("");
+        }
+    };
 
-
+    window.addEventListener('scroll', handleScroll);
 
   return (
-    <nav className='nav-container'>
+    <nav className={`nav-container ${scrollState}`}>
         <div className='nav-title'>
             <Link to="/">Gacha</Link>
         </div>
