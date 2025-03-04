@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import './Tab.css'
+import './Tab.css';
+import SkillCard from './SkillCard';
 
 function Tab(props) {
 
@@ -39,12 +40,18 @@ function Tab(props) {
             <div
               className={`${activeTab === 0 ? "active-content" : "content"}`}
             >
-              <img src="/images/37_i0.png" alt=""></img>
+              <SkillCard></SkillCard>
+              
             </div>
             <div
               className={`${activeTab === 1 ? "active-content" : "content"}`}
             >
               <img src="/images/37_i2.png" alt=""></img>
+            </div>
+            <div
+              className={`${activeTab === 2 ? "active-content" : "content"}`}
+            >
+               <img src="/images/37_i0.png" alt=""></img>
             </div>
           </div>
         </div> 

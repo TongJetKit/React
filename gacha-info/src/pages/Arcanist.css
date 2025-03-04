@@ -1,5 +1,5 @@
 .arcanist-container{
-    background-color: #513636;
+    background-color: #22223b;
     padding-top: 100px;
 }
 
@@ -20,7 +20,7 @@
 
 .button-group{
     display: flex;
-    gap: 0.5rem;
+    gap: 0.75rem;
     justify-content: flex-end;
 }
 
@@ -34,10 +34,9 @@
 .icon{
   align-items: center;
   appearance: none;
-  background-color: #6F4E37;
+  background-color: #444554;
   border-radius: 4px;
   border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#473223 0 -3px 0 inset;
   box-sizing: border-box;
   color: #ffff;
   cursor: pointer;
@@ -45,12 +44,12 @@
   font-family: "Jua", sans-serif;
   justify-content: center;
   line-height: 1;
-  height:52px;
-  width: 135px;
+  height:50px;
+  width: 130px;
   list-style: none;
   overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
   text-align: left;
   text-decoration: none;
   transition: box-shadow .15s,transform .15s;
@@ -63,8 +62,8 @@
 }
 
 .active {
-    background-color: #4d3626;
-    border: 2px solid #F7DCB9;
+    background-color: #616378;
+    border: 2px solid #e3e0dd;
 }
 
 .clear-button{
@@ -73,7 +72,7 @@
 }
 
 .icon:hover {
-  box-shadow: #AB886D 0 2px 7px, #AB886D 0 -3px 0 inset;
+  box-shadow: #ffff 0 2px 7px, #ffff 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 

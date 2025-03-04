@@ -12,7 +12,7 @@
 }
 
 .profile-container{
-    background-color:  #2d2424;
+    background-color:  #22223b;
     padding: 60px;
 
 }
@@ -20,12 +20,12 @@
 .profile-info{
     display:flex;
     justify-content: space-between;
-    padding: 2em 0 2em 0;
+    padding: 1em 0 2em 0;
     border-bottom: 2px solid #e5e5e5;
 }
 
 .avatar{
-    height: 18rem;
+    height: 15rem;
     position: relative;
     border: 3px solid #608BC1;
     border-radius: 12px;
@@ -47,7 +47,7 @@
 }
 
 .profile-name{
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 500;
     font-style: normal;
 }
@@ -58,17 +58,16 @@
 }
 
 .profile-type{
-   font-size: 30px;
+   font-size: 25px;
 }
 
 .profile-afflatus{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .Star{
     color:#608BC1;
 }
-
 
 .profile-inheritance{
     flex-basis: 100%;
