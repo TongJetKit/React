@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Arcanist.css";
 import ArcanistCard from "../components/ArcanistCard";
-import { db } from "../database/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { ArcanistContext } from "../context/ArcanistContext";
 
 const afflatus = ["Beast", "Intellect", "Mineral", "Plant", "Spirit", "Star"];
 const tier = [2, 3, 4, 5, 6];
 
 function Arcanist() {
-  const arcanistCollectionRef = collection(db, "arcanist");
-
+  const totalArcanistList = useContext(ArcanistContext);
+  console.log(totalArcanistList);
   const [selectedAfflatus, setSelectedAfflatus] = useState([]);
   const [selectedTier, setSelectedTier] = useState([]);
   const [arcanistList, setArcanistList] = useState([]);
@@ -42,25 +41,79 @@ function Arcanist() {
     setSelectedTier([]);
   };
 
-  const getCharacterList = async () => {
-    try {
-      const querySnapshot = await getDocs(arcanistCollectionRef);
-      const filtered_data = querySnapshot.docs.map((doc) => ({...doc.data(), id: doc.id}));
-      setArcanistList(filtered_data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const getCharacterList = async () => {
+  //   try {
+  //     const querySnapshot = await getDocs(arcanistCollectionRef);
+  //     const filtered_data = querySnapshot.docs.map((doc) => ({...doc.data(), id: doc.id}));
+  //     setArcanistList(filtered_data);
+  //     totalArcanistList = filtered_data;
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+  // const filterArcanistOnAfflatus = () =>{
+  //   if(selectedAfflatus.length > 0){
+  //     let filteredItems = selectedAfflatus.map((afflatus)=>{
+  //       return totalArcanistList.filter((arcanist)=>arcanist.afflatus === afflatus);
+  //     })
+  //     setArcanistList(filteredItems.flat());
+  //   }else{
+  //     setArcanistList(totalArcanistList);
+  //   }
+  // }
+
+  // const filterArcanistOnTier = () =>{
+  //   if(selectedTier.length > 0){
+  //     let filteredItems = selectedTier.map((tier)=>{
+  //       return totalArcanistList.filter((arcanist)=>arcanist.tier === tier);
+  //     })
+  //     console.log(filteredItems);
+  //     setArcanistList(filteredItems.flat());
+  //   }else{
+  //     setArcanistList(totalArcanistList);
+  //   }
+  // }
+
+  // const filterArcanist = () =>{
+  //   if(selectedTier.length > 0){
+  //     let filteredItems = selectedTier.map((tier)=>{
+  //       return totalArcanistList.filter((arcanist)=>arcanist.tier === tier);
+  //     })
+  //     console.log(filteredItems);
+  //     setArcanistList(filteredItems.flat());
+  //   }else{
+  //     setArcanistList(totalArcanistList);
+  //   }
+
+  //   if(selectedAfflatus.length > 0){
+  //     let filteredItems = selectedAfflatus.map((afflatus)=>{
+  //       return totalArcanistList.filter((arcanist)=>arcanist.afflatus === afflatus);
+  //     })
+  //     setArcanistList(filteredItems.flat());
+  //   }else{
+  //     setArcanistList(totalArcanistList);
+  //   }
+  // }
 
   useEffect(() => {
-    getCharacterList();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setArcanistList(totalArcanistList);
+    console.log(arcanistList);
   }, []);
 
+
   // useEffect(() => {
-  //   console.log(selectedAfflatus);
+  //   filterArcanistOnAfflatus();
+  // }, [selectedAfflatus]);
+
+  // useEffect(() => {
   //   console.log(selectedTier);
-  // }, [selectedAfflatus, selectedTier]);
+  //   filterArcanistOnTier();
+  // }, [selectedTier]);
+
+  // useEffect(() => {
+  //   filterArcanist();
+  // }, [selectedTier, selectedAfflatus]);
 
   return (
     <div className="arcanist-container">

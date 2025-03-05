@@ -5,7 +5,7 @@ import { Link,useMatch, useResolvedPath } from 'react-router-dom';
 function NavBar() {
     const [scrollState, setScrollState] = useState("");
     const handleScroll = () =>{
-        if(window.scrollY > 50){
+        if(window.scrollY > 350){
             setScrollState("nav-scrolled");
         }else{
             setScrollState("");
