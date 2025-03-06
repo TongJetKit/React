@@ -1,25 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 .nav-container{
+    /* background-image: linear-gradient(to bottom, #a1c4fd 30%, transparent 100%); */
+    /* background-image: linear-gradient(to bottom, #a1c4fd 20%, transparent 100%); */
+    background-color: black;
     width: 100%;
     display:flex;
-    align-items: stretch;
     text-align: center;
     justify-content: space-between;
     gap: 2rem;
     transition:all 0.5s;
     position: fixed;
+    opacity: 90%;
     z-index: 20;
     color: white;
     padding: 0 1rem;
 }
 
 .nav-scrolled{
-    background-color: #22223b;
+    background-color: transparent;
 }
 
 .nav-title{
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     font-family: "Jua", sans-serif;
     display: flex;
     align-items: center;
@@ -32,7 +35,7 @@
 }
 
 .nav-menu ul{
-    height:70%;
+    height:75%;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -41,19 +44,22 @@
 }
 
 .nav-menu li{
+    border-radius: 12px;
+    display: flex;
+    height:100%;
     align-items: center;
     padding: 20px 5px;
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-family: "Jua", sans-serif;
 }
 
 
 .nav-menu-active{
-    color: #8fbd9c;
-    border-bottom: 2px solid #ffff
+    /* color: #8fbd9c; */
+    background-color: #4e5c9a;
 }
 
-.nav-menu li:hover{
+/* .nav-menu li:hover{
     color:#667d84 ;
-}
+} */

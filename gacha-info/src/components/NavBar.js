@@ -17,7 +17,7 @@ function NavBar() {
   return (
     <nav className={`nav-container ${scrollState}`}>
         <div className='nav-title'>
-            <Link to="/">Gacha</Link>
+            <Link to="/">MARCUS'S SUITCASE</Link>
         </div>
         <div className='nav-menu'>
             <ul>
