@@ -3,9 +3,9 @@ import './Home.css';
 
 function Home() {
   return (
-    <>
-    <div>Home</div>
-    </>
+    <div className="homePage">
+      <img className="mainPageImage" src="/images/mainPageImage.png" alt=""></img>
+    </div>
    
   )
 }
