@@ -8,6 +8,7 @@ const ArcanistProvider = ({ children }) => {
 
     const arcanistCollectionRef = collection(db, "arcanist");
     const [arcanistList, setArcanistList] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     // Fetch the data from the database
     const getArcanistList = async () => {
@@ -15,8 +16,11 @@ const ArcanistProvider = ({ children }) => {
         const querySnapshot = await getDocs(arcanistCollectionRef);
         const filtered_data = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
         setArcanistList(filtered_data);
+        console.log("Context has it: ", filtered_data);
+        setLoading(false);
       } catch (err) {
         console.log(err);
+        setLoading(false);
       }
     };
   
@@ -25,7 +29,7 @@ const ArcanistProvider = ({ children }) => {
     }, []);
 
     return (
-        <ArcanistContext.Provider value={arcanistList}>
+        <ArcanistContext.Provider value={{arcanistList, loading}}>
             {children}
         </ArcanistContext.Provider>
     );

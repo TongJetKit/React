@@ -1,5 +1,17 @@
+.loading-screen {
+    position: fixed;
+    top: 50%;           /* Move the element 50% from the top */
+    left: 50%;          /* Move the element 50% from the left */
+    transform: translate(-50%, -50%); 
+    z-index: 10;
+  }
+  
+
+
 .arcanist-container{
-    background-color: #22223b;
+    /* background-color: #22223b; */
+    background-color: #dcdcdc;
+    height:100vh;
     padding-top: 100px;
 }
 
@@ -33,12 +45,13 @@
 
 .icon{
   align-items: center;
-  appearance: none;
-  background-color: #444554;
+  /* appearance: none; */
+  /* background-color: #5e6993; */
+  border:2px solid #5e6993 ;
   border-radius: 4px;
-  border-width: 0;
+  /* border-width: 0; */
   box-sizing: border-box;
-  color: #ffff;
+  color: #5e6993;
   cursor: pointer;
   display: inline-flex;
   font-family: "Jua", sans-serif;
@@ -62,8 +75,9 @@
 }
 
 .active {
-    background-color: #616378;
-    border: 2px solid #e3e0dd;
+    background-color: #4b5476;
+    color:white;
+    /* border: 2px solid #e3e0dd; */
 }
 
 .clear-button{
@@ -72,8 +86,8 @@
 }
 
 .icon:hover {
-  box-shadow: #ffff 0 2px 7px, #ffff 0 -3px 0 inset;
-  transform: translateY(-2px);
+  /* box-shadow: #ffff 0 2px 7px, #ffff 0 -1.5px 0 inset; */
+  transform: translateY(-5px);
 }
 
 .icon:active {
