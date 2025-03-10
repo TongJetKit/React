@@ -9,9 +9,9 @@
     justify-content: space-between;
     gap: 2rem;
     transition:all 0.5s;
-    position: sticky;
+    position: fixed;
+    z-index: 999;
     opacity: 90%;
-    z-index: 20;
     color: white;
     padding: 0 1rem;
 }
