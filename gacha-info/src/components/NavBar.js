@@ -3,19 +3,19 @@ import './NavBar.css';
 import { Link,useMatch, useResolvedPath } from 'react-router-dom';
 
 function NavBar() {
-    const [scrollState, setScrollState] = useState("");
-    const handleScroll = () =>{
-        if(window.scrollY > 350){
-            setScrollState("nav-scrolled");
-        }else{
-            setScrollState("");
-        }
-    };
+    // const [scrollState, setScrollState] = useState("");
+    // const handleScroll = () =>{
+    //     if(window.scrollY > 350){
+    //         setScrollState("nav-scrolled");
+    //     }else{
+    //         setScrollState("");
+    //     }
+    // };
 
-    window.addEventListener('scroll', handleScroll);
+    // window.addEventListener('scroll', handleScroll);
 
   return (
-    <nav className={`nav-container ${scrollState}`}>
+    <nav className={`nav-container `}>
         <div className='nav-title'>
             <Link to="/">MARCUS'S SUITCASE</Link>
         </div>
