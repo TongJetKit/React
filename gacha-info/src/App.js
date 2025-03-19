@@ -1,7 +1,7 @@
 
 import './App.css';
 import NavBar from './components/NavBar';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Arcanist from './pages/Arcanist';
 import Home from './pages/Home';
 import Leaks from './pages/Leaks';
@@ -10,12 +10,12 @@ import { ArcanistProvider } from './context/ArcanistContext';
 
 
 function App() {
-
+  const location = useLocation();
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar />
+        {/* <NavBar /> */}
+        {location.pathname !== "/" && <NavBar />}
         <ArcanistProvider>
           <Routes>
             <Route path="/" exact={true} Component={Home} />
@@ -25,8 +25,6 @@ function App() {
           </Routes>
         </ArcanistProvider>
 
-
-      </BrowserRouter>
     </div>
   );
 }
