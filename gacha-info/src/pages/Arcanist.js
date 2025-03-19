@@ -89,19 +89,19 @@ function Arcanist() {
       }).flat()
     }
 
-    console.log("after afflatus filter: ", filteredItems);
+    // console.log("after afflatus filter: ", filteredItems);
 
     if(selectedTier.length > 0){
       filteredItems = selectedTier.map((tier)=>{
         return (filteredItems.filter((arcanist)=>arcanist.tier === tier));
       }).flat();
     }
-    console.log("after tier filter: ", filteredItems);
+    // console.log("after tier filter: ", filteredItems);
     setCurrentArcanistList(filteredItems.flat());
   }
 
   useEffect(() => {
-    if(loading === true){
+    if(loading === false){
       setCurrentArcanistList(arcanistList);
     }
   }, [loading]);
