@@ -2,13 +2,24 @@
     width: 100%;
     height: 100vh;  /* Make the container take full viewport height */
     overflow: hidden; 
-}
-
-
-.mainPageImage {
-    height: 100%;
-    width: 100%;
-    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),url(../../public/images/mainPageImage.png);
+    background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex; /* Equivalent to 'flex' */
+    flex-direction: column; /* Equivalent to 'flex-col' */
+    justify-content: start;
+    align-items: center; /* Equivalent to 'items-center' */
+    text-align: center; /* Equivalent to 'text-center' */
+    gap: 1.5rem; /* Equivalent to 'gap-6' (1.5rem is the value of gap-6 in Tailwind) */
+
+}
+
+.title{
+    padding-top: 12px;
+    font-family: "Fleur De Leah", cursive;
+    font-weight: bold;
+    font-size: 5rem;
+    font-style: normal;
+    color:#3d2f23;
 }
