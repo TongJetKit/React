@@ -1,9 +1,14 @@
+.arcanist-info{
+    margin-top: 60px;
+}
+
 .hero-banner-container{
-    height: 400px;
+    height: 320px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 .hero-banner-container img{
+    object-position: 0% 10%;
     object-fit: cover;
     position: relative;
     height: 100%;
@@ -12,22 +17,21 @@
 }
 
 .profile-container{
-    background-color:  #22223b;
+    background-color:  #dcdcdc;
     padding: 60px;
-
 }
 
 .profile-info{
     display:flex;
     justify-content: space-between;
     padding: 1em 0 2em 0;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 3px solid rgb(115, 114, 114);
 }
 
 .avatar{
-    height: 15rem;
+    height: 14rem;
     position: relative;
-    border: 3px solid #608BC1;
+    border: 3px solid #5e6993;
     border-radius: 12px;
 }
 
@@ -36,7 +40,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    color: white;
+    color: black;
 }
 
 .profile{
@@ -44,25 +48,25 @@
     flex-direction: column;
     justify-content: space-around;
     gap: 15px;
+    font-size: 22px;
 }
 
 .profile-name{
-    font-size: 25px;
+
     font-weight: 500;
     font-style: normal;
 }
 
 .profile-tier{
     color: rgba(231,164,39,1);
-    font-size: 25px;
 }
 
 .profile-type{
-   font-size: 25px;
+
 }
 
 .profile-afflatus{
-    font-size: 25px;
+
 }
 
 .Star{
