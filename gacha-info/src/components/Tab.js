@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, {Children, useState} from 'react';
 import './Tab.css';
 import SkillCard from './SkillCard';
 
+
 function Tab(props) {
-
     const [activeTab, setActiveTab] = useState(0);
-
+   
     const handleActiveTab = (index) => {
       setActiveTab(index);
     };
@@ -40,7 +40,7 @@ function Tab(props) {
             <div
               className={`${activeTab === 0 ? "active-content" : "content"}`}
             >
-              <SkillCard></SkillCard>
+              {props.children[0]}
               
             </div>
             <div

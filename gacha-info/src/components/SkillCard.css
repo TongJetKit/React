@@ -1,40 +1,84 @@
 .skill-card {
-    border: 1px solid #ffffff;
-    background-color: #546a7b; /* Background color for the card */
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-  }
-  
-  .skill-header {
-    background-color: #444554; /* Header background color */
-    padding: 10px;
-    text-align: left;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-bottom: 1px solid #ffffff;
-  }
-  
-  .skill-body {
-    display: grid;
-    grid-template-columns: 0.5fr 2fr; /* Split into 2 parts */
-    justify-content: space-between;
-  }
+  border: 1.5px solid #003366 ;
+  /* background-color: #546a7b; */
+  background-color: #dcdcdc;
+  /* Background color for the card */
+  color: black;
+  font-family: "Jua", sans-serif;
+  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom: 3rem;
+}
 
-  .skill-image{
-    border-right: 1px solid #ffffff;
-    padding: 10px;
-  }
+.skill-header {
+  color: white;
+  /* Header background color */
+  padding: 10px;
+  text-align: left;
+  font-size: 1.5rem; 
+  border-bottom: 2px solid #003366 ;
 
-  .skill-image img {
-    background-size: contain;
-    width: 100%;
-    height: auto;
+  &.Star{
+    background-color: #5379a7;
   }
-  
-  .skill-info {
-    display: flex;
-    padding: 1rem;
-    font-size: 16px;
-    line-height: 26px;
+  &.Mineral{
+    background-color: #85664c;
   }
-  
+  &.Beast{
+    background-color: #D84040;
+  }
+  &.Plant{
+    background-color: #255F38;
+  }
+  &.Spirit{
+    background-color: #9e38ba;
+  }
+  &.Intelligence{
+    background-color: #c1ae76;
+  }
+}
+
+
+
+.skill-body {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  /* Split into 2 parts */
+  justify-content: space-between;
+}
+
+.skill-image {
+  border-right: 1.5px solid #003366 ;
+  position: relative;
+  width: 180px;
+  height: 265px;
+
+}
+
+.skill-image img {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skill-info-container {
+  display: flex;
+  font-size: 16px;
+  line-height: 26px;
+  flex-wrap: wrap;
+}
+
+.skill-info {
+  padding: 1rem 0rem 1rem 1rem;
+  font-size: 1.1rem; 
+  flex: 0 0 auto;
+  width: 100%;
+ 
+}
+
+.skill-info:not(:last-child){
+   border-bottom: 1.5px solid #003366 ;
+}
