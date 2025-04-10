@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
-import "./Arcanist.css";
+import "./ArcanistList.css";
 import ArcanistCard from "../components/ArcanistCard";
 import { ArcanistContext } from "../context/ArcanistContext";
 
 const afflatus = ["Beast", "Intellect", "Mineral", "Plant", "Spirit", "Star"];
 const tier = [2, 3, 4, 5, 6];
 
-function Arcanist() {
+function ArcanistList() {
   const { arcanistList, loading } = useContext(ArcanistContext);
   const [selectedAfflatus, setSelectedAfflatus] = useState([]);
   const [selectedTier, setSelectedTier] = useState([]);
@@ -190,4 +190,4 @@ function Arcanist() {
   );
 }
 
-export default Arcanist;
+export default ArcanistList;
