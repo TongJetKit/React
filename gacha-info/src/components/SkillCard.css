@@ -49,24 +49,37 @@
   justify-content: space-between;
 }
 
-.skill-image {
-  border-right: 1.5px solid #003366 ;
-  position: relative;
-  width: 180px;
-  height: 265px;
 
+.card-img{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  text-align: center;
 }
 
-.skill-image img {
+.card-skill{
+  width: 173px;
+  height: 226px;
+}
+
+.card-ultimate{
+  width: 165px;  /* 288 * 0.6 */
+  height: 292px; /* 436 * 0.6 */
+  
+  border-radius: 200px 200px 0 0;
+}
+
+.card-ultimate-background{
   position: absolute;
-  padding: 20px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top:1%;
+  left:3%;
 }
 
 .skill-info-container {
+  border-left: 1.5px solid #003366 ;
   display: flex;
   font-size: 16px;
   line-height: 26px;
