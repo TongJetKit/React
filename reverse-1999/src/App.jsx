@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css';
 import Home from './pages/Home';
+import Leaks from './pages/Leaks';
 // import NavBar from './components/NavBar';
 // import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 // import ArcanistList from './pages/ArcanistList';
@@ -18,7 +19,7 @@ function App() {
 
   return(
     <>
-      <Home></Home>
+     <Home></Home>
     </>
     
   )
