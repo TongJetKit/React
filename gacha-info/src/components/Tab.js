@@ -51,7 +51,7 @@ function Tab(props) {
             <div
               className={`${activeTab === 2 ? "active-content" : "content"}`}
             >
-               <img src="/images/37_i0.png" alt=""></img>
+              {props.children[2]}
             </div>
           </div>
         </div> 
