@@ -1,0 +1,42 @@
+.tabs{
+    display: flex;
+    gap:20px;
+    position: relative;
+    color: white;
+    padding-bottom: 50px;
+}
+
+.tab-block{
+    position: relative;
+    font-family: "Jua", sans-serif;
+    font-size: 20px;
+    background-color: #444554;
+    flex-grow: 1;
+    padding: 0.5rem 2rem;
+    height: 60px;
+    z-index: 2;
+    font-weight: 500;
+}
+
+.content-container{
+    padding: 1.5rem 0.5rem;
+
+}
+
+.active-tab{
+    border: 2px solid #bbb;
+    background-color: #616378;
+    color: #fff;
+}
+
+
+.content{
+    display: none;
+}
+
+
+.active-content{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+}

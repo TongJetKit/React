@@ -1,0 +1,115 @@
+.loading-screen {
+    position: fixed;
+    top: 50%;           /* Move the element 50% from the top */
+    left: 50%;          /* Move the element 50% from the left */
+    transform: translate(-50%, -50%); 
+    z-index: 10;
+  }
+  
+
+
+.arcanist-container{
+    /* background-color: #22223b; */
+    background-color: #dcdcdc;
+    height:100vh;
+    padding-top: 100px;
+}
+
+.title{
+    margin-left: 1rem;
+    font-size: 30px;
+    font-family: "Jua", sans-serif;
+    Color: white;
+}
+
+.filter-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-right: 5rem;
+}
+
+.button-group{
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+
+.icon img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.icon{
+  align-items: center;
+  /* appearance: none; */
+  /* background-color: #5e6993; */
+  border:2px solid #5e6993 ;
+  border-radius: 4px;
+  /* border-width: 0; */
+  box-sizing: border-box;
+  color: #5e6993;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Jua", sans-serif;
+  justify-content: center;
+  line-height: 1;
+  height:50px;
+  width: 130px;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 15px;
+}
+
+.active {
+    background-color: #4b5476;
+    color:white;
+    /* border: 2px solid #e3e0dd; */
+}
+
+.clear-button{
+    width:55px;
+    margin-left: 28px;
+}
+
+.icon:hover {
+  /* box-shadow: #ffff 0 2px 7px, #ffff 0 -1.5px 0 inset; */
+  transform: translateY(-5px);
+}
+
+.icon:active {
+    transform: translateY(3px);
+}
+
+.tier{
+    gap: 5px;
+    align-content: center;
+    display: flex;
+}
+
+.tier i{
+    padding-bottom: 2px;
+}
+
+.arcanist-info-container{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 50px;
+}
+

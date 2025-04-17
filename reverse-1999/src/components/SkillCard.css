@@ -1,0 +1,99 @@
+.skill-card {
+  /* border: 1.5px solid #003366 ; */
+  /* background-color: #546a7b; */
+  background-color: #dcdcdc;
+  /* Background color for the card */
+  color: rgb(59, 59, 59);
+  font-family: "Jua", sans-serif;
+  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom: 3rem;
+  box-shadow: 0px 18px 20px -3px rgba(0,0,0,0.3),0px 10px 14px 1px rgba(0,0,0,0.25),0px 4px 18px 3px rgba(0,0,0, 0.25);
+  
+}
+
+.skill-header {
+  color: white;
+  /* Header background color */
+  padding: 10px;
+  text-align: left;
+  font-size: 1.5rem; 
+  border-bottom: 2px solid #003366 ;
+
+  &.Star{
+    background-color: #5379a7;
+  }
+  &.Mineral{
+    background-color: #85664c;
+  }
+  &.Beast{
+    background-color: #D84040;
+  }
+  &.Plant{
+    background-color: #255F38;
+  }
+  &.Spirit{
+    background-color: #9e38ba;
+  }
+  &.Intelligence{
+    background-color: #c1ae76;
+  }
+}
+
+
+
+.skill-body {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  /* Split into 2 parts */
+  justify-content: space-between;
+}
+
+
+.card-img{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  text-align: center;
+}
+
+.card-skill{
+  width: 173px;
+  height: 226px;
+}
+
+.card-ultimate{
+  width: 165px;  /* 288 * 0.6 */
+  height: 292px; /* 436 * 0.6 */
+  
+  border-radius: 200px 200px 0 0;
+}
+
+.card-ultimate-background{
+  position: absolute;
+  top:1%;
+  left:3%;
+}
+
+.skill-info-container {
+  border-left: 1.5px solid #003366 ;
+  display: flex;
+  font-size: 16px;
+  line-height: 26px;
+  flex-wrap: wrap;
+}
+
+.skill-info {
+  padding: 1rem 0rem 1rem 1rem;
+  font-size: 1.1rem; 
+  flex: 0 0 auto;
+  width: 100%;
+ 
+}
+
+.skill-info:not(:last-child){
+   border-bottom: 1.5px solid #003366 ;
+}

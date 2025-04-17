@@ -1,0 +1,114 @@
+.arcanist-info{
+    margin-top: 60px;
+}
+
+.hero-banner-container{
+    height: 320px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.hero-banner-container img{
+    object-position: 0% 10%;
+    object-fit: cover;
+    position: relative;
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+}
+
+.profile-container{
+    background-color:  #dcdcdc;
+    padding: 60px;
+}
+
+.profile-info{
+    display:flex;
+    justify-content: space-between;
+    padding: 1em 0 2em 0;
+    border-bottom: 3px solid rgb(115, 114, 114);
+}
+
+.avatar{
+    height: 14rem;
+    position: relative;
+    border: 3px solid #5e6993;
+    border-radius: 12px;
+}
+
+.information-column{
+    font-family: "Jua", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: black;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+    font-size: 22px;
+}
+
+.profile-name{
+
+    font-weight: 500;
+    font-style: normal;
+}
+
+.profile-tier{
+    color: rgba(231,164,39,1);
+}
+
+.profile-type{
+
+}
+
+.profile-afflatus{
+
+}
+
+.Star{
+    color:#608BC1;
+}
+
+.profile-inheritance{
+    flex-basis: 100%;
+}
+
+.content-header{
+    border-bottom: 3px solid white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 25px 0 15px;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.insight-column{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+}
+
+.insight-column img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.combat-info-tabs{
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+
+
