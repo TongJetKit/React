@@ -57,9 +57,10 @@ function ArcanistInfo() {
           </div> */}
             </div>
             <div className="combat-info-tabs">
-              <Tab topics={["Skill", "Potray", "Insight"]}>
+              <Tab topics={["Arcane Skill", "Potray", "Insight"]}>
                 <SkillCard skillInfo={skillInfo} afflatus={arcanist.afflatus}></SkillCard>
                 <SkillCard skillInfo={skillInfo}></SkillCard>
+                <SkillCard skillInfo={skillInfo} afflatus={arcanist.afflatus}></SkillCard>
               </Tab>
             </div>
           </div>
