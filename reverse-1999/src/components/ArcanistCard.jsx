@@ -27,7 +27,7 @@ function ArcanistCard(props) {
 
   return (
     <Link to={`./${props.arcanist.name}`} state={{arcanist:props.arcanist}}>
-      <div className="card">
+      <div className="card border border-gray-300">
         <div className={`overlay ${tier}`}></div>
         <div className="card-content">
           <img src="/images/37.png" alt=""></img>
