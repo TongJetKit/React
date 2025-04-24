@@ -3,7 +3,7 @@
     width: 100%;
     height: 100vh;  /* Make the container take full viewport height */
     overflow: hidden; 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),url(../../public/images/mainPageImage.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),url(/images/mainPageImage.png);
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
 
 }
 
-.title{
+.home-title{
     padding-top: 12px;
     font-family: "Fleur De Leah", cursive;
     font-weight: bold;
