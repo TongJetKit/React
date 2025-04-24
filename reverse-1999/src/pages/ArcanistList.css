@@ -9,8 +9,6 @@
 
 
 .arcanist-container{
-    /* background-color: #22223b; */
-    background-color: #dcdcdc;
     height:100vh;
     padding-top: 100px;
 }
@@ -107,7 +105,7 @@
 .arcanist-info-container{
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
     flex-wrap: wrap;
     align-items: center;
     margin: 50px;

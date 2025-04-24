@@ -119,7 +119,7 @@ function ArcanistList() {
       ) :
         (
 
-          <div className="arcanist-container">
+          <div className="arcanist-container bg-base-200">
             {/* <div className="title">Arcanist</div> */}
             <div className="filter-container">
               <div className="button-group">
