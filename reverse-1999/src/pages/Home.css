@@ -9,18 +9,68 @@
     background-size: cover;
     display: flex; /* Equivalent to 'flex' */
     flex-direction: column; /* Equivalent to 'flex-col' */
-    justify-content: start;
-    align-items: center; /* Equivalent to 'items-center' */
+    justify-content: center;
+    align-items: start; /* Equivalent to 'items-center' */
     text-align: center; /* Equivalent to 'text-center' */
     gap: 1.5rem; /* Equivalent to 'gap-6' (1.5rem is the value of gap-6 in Tailwind) */
 
 }
 
+
+
+.main-container{
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    margin-left: 4rem;
+    padding: 40px 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .home-title{
-    padding-top: 12px;
+    /* padding-bottom: 1rem; */
     font-family: "Fleur De Leah", cursive;
     font-weight: bold;
     font-size: 5rem;
     font-style: normal;
     color:#3d2f23;
 }
+
+.slogan-title{
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.slogan-subtitle{
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+
+.slogan{
+    /* backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    /* width:250px;
+    height:300px; */
+}
+
+.logo{
+    width:50%;
+}
+
