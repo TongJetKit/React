@@ -8,6 +8,7 @@ function Home() {
       <div className="title">Marcus's Suitcase</div>
       <div class="flex gap-4">
             <Link className="btn btn-neutral" to="/arcanist">Arcanist</Link>
+            <button className="btn btn-neutral">Neutral</button>
     
             {/* <a class="btn btn-neutral">
                 See our blog
